@@ -84,7 +84,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="uNd-EC-aT7" kind="show" id="xN8-Ng-AWM"/>
+                                    <segue destination="uNd-EC-aT7" kind="show" identifier="MenuDetailSegue" id="xN8-Ng-AWM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
