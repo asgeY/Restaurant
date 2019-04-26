@@ -54,7 +54,6 @@
 		D753FC032272582D0060089A = {
 			isa = PBXGroup;
 			children = (
-				D73F4E4522727E1300DD478A /* MenuController.swift */,
 				D753FC0E2272582D0060089A /* Restaurant */,
 				D753FC0D2272582D0060089A /* Products */,
 			);
@@ -71,6 +70,7 @@
 		D753FC0E2272582D0060089A /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				D73F4E4522727E1300DD478A /* MenuController.swift */,
 				D764CD2622726992004610F1 /* MenuItem.swift */,
 				D764CD2822726B30004610F1 /* IntermediaryModels.swift */,
 				D764CD2A22726BFA004610F1 /* Order.swift */,
