@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D73F4E4622727E1300DD478A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F4E4522727E1300DD478A /* MenuController.swift */; };
 		D753FC102272582D0060089A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D753FC0F2272582D0060089A /* AppDelegate.swift */; };
 		D753FC122272582D0060089A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D753FC112272582D0060089A /* ViewController.swift */; };
 		D753FC152272582D0060089A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D753FC132272582D0060089A /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D73F4E4522727E1300DD478A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D753FC0C2272582D0060089A /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D753FC0F2272582D0060089A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D753FC112272582D0060089A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		D753FC032272582D0060089A = {
 			isa = PBXGroup;
 			children = (
+				D73F4E4522727E1300DD478A /* MenuController.swift */,
 				D753FC0E2272582D0060089A /* Restaurant */,
 				D753FC0D2272582D0060089A /* Products */,
 			);
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73F4E4622727E1300DD478A /* MenuController.swift in Sources */,
 				D764CD2722726992004610F1 /* MenuItem.swift in Sources */,
 				D753FC24227266770060089A /* MenuTableViewController.swift in Sources */,
 				D753FC28227267E80060089A /* MenuItemDetailViewController.swift in Sources */,
