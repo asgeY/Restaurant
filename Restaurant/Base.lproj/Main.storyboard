@@ -212,11 +212,63 @@
                             <outlet property="delegate" destination="hvg-r2-eRP" id="aGp-aa-c0c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Z1T-dY-1BJ"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Z1T-dY-1BJ">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Jjw-4V-Yqy">
+                            <connections>
+                                <action selector="submitTapped:" destination="hvg-r2-eRP" id="3Rf-u7-O7C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="IX5-GQ-z84" kind="presentation" identifier="ConfirmationSegue" id="OSt-V1-g2E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Qq-aA-DFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.3623188405797" y="462.72321428571428"/>
+            <point key="canvasLocation" x="1071" y="463"/>
+        </scene>
+        <!--Order Confirmation View Controller-->
+        <scene sceneID="3FR-P9-Qk4">
+            <objects>
+                <viewController id="IX5-GQ-z84" customClass="OrderConfirmationViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RYC-9x-SRW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2z-XA-V0F">
+                                <rect key="frame" x="20" y="438" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOk-Ke-AqN">
+                                <rect key="frame" x="180" y="466.5" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="Cxh-jH-TPY" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="54F-qy-rIc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WOk-Ke-AqN" firstAttribute="centerX" secondItem="RYC-9x-SRW" secondAttribute="centerX" id="0xo-gc-G9O"/>
+                            <constraint firstItem="WOk-Ke-AqN" firstAttribute="top" secondItem="e2z-XA-V0F" secondAttribute="bottom" constant="8" id="RRT-xC-1lU"/>
+                            <constraint firstItem="e2z-XA-V0F" firstAttribute="leading" secondItem="RYC-9x-SRW" secondAttribute="leadingMargin" id="STB-eY-YhC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e2z-XA-V0F" secondAttribute="trailing" id="SVm-du-TiH"/>
+                            <constraint firstItem="e2z-XA-V0F" firstAttribute="centerY" secondItem="RYC-9x-SRW" secondAttribute="centerY" id="dyx-n8-x77"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oQd-O7-ndi"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="timeRemainingLabel" destination="e2z-XA-V0F" id="cZf-hB-YCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNk-Xc-wcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Cxh-jH-TPY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2013" y="461"/>
         </scene>
         <!--Your Order-->
         <scene sceneID="ELa-Ft-bMv">

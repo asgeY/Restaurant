@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D725B5DF2274B0A00002B2E4 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725B5DE2274B0A00002B2E4 /* OrderConfirmationViewController.swift */; };
 		D73F4E4622727E1300DD478A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F4E4522727E1300DD478A /* MenuController.swift */; };
 		D753FC102272582D0060089A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D753FC0F2272582D0060089A /* AppDelegate.swift */; };
 		D753FC122272582D0060089A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D753FC112272582D0060089A /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D725B5DE2274B0A00002B2E4 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		D73F4E4522727E1300DD478A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D753FC0C2272582D0060089A /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D753FC0F2272582D0060089A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				D764CD2822726B30004610F1 /* IntermediaryModels.swift */,
 				D764CD2A22726BFA004610F1 /* Order.swift */,
 				D753FC0F2272582D0060089A /* AppDelegate.swift */,
+				D725B5DE2274B0A00002B2E4 /* OrderConfirmationViewController.swift */,
 				D753FC112272582D0060089A /* ViewController.swift */,
 				D753FC132272582D0060089A /* Main.storyboard */,
 				D753FC27227267E80060089A /* MenuItemDetailViewController.swift */,
@@ -168,6 +171,7 @@
 				D764CD2922726B30004610F1 /* IntermediaryModels.swift in Sources */,
 				D753FC122272582D0060089A /* ViewController.swift in Sources */,
 				D753FC102272582D0060089A /* AppDelegate.swift in Sources */,
+				D725B5DF2274B0A00002B2E4 /* OrderConfirmationViewController.swift in Sources */,
 				D753FC222272666A0060089A /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
