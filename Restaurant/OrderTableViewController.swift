@@ -74,6 +74,10 @@ class OrderTableViewController: UITableViewController {
     
     @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
         
+        if segue.identifier == "DismissConfirmation" {
+            MenuController.shared.order.menuItems.removeAll()
+        }
+        
     }
 
     // MARK: - Table view data source
