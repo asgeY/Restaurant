@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         MenuController.shared.loadOrder()
+        MenuController.shared.loadItems()
+        MenuController.shared.loadRemoteData()
         return true
     }
 
@@ -55,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
         MenuController.shared.saveOrder()
+        MenuController.shared.saveItems()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
