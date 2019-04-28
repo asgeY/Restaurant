@@ -17,6 +17,7 @@ class MenuItemDetailViewController: UIViewController {
     @IBOutlet weak var addToOrderButton: UIButton!
     
     @IBAction func addToOrderButtonTapped(_ sender: UIButton) {
+        guard let menuItem = menuItem else { return }
         
         UIView.animate(withDuration: 0.3) {
             self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
@@ -29,7 +30,7 @@ class MenuItemDetailViewController: UIViewController {
     }
     
     
-    var menuItem: MenuItem!
+    var menuItem: MenuItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class MenuItemDetailViewController: UIViewController {
     }
     
     func updateUI() {
+        guard let menuItem = menuItem else { return }
         titleLabel.text = menuItem.name
         priceLabel.text = String(format: "$%.2f", menuItem.price)
         detailTextLabel.text = menuItem.detailText
@@ -54,6 +56,7 @@ class MenuItemDetailViewController: UIViewController {
     
     override func encodeRestorableState(with coder: NSCoder) {
         super.encodeRestorableState(with: coder)
+        guard let menuItem = menuItem else { return }
         coder.encode(menuItem.id, forKey: "menuItemId")
     }
     

@@ -12,7 +12,7 @@ class MenuTableViewController: UITableViewController {
     
     let menuController = MenuController()
     var menuItems = [MenuItem]()
-    var category: String!
+    var category: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +36,9 @@ class MenuTableViewController: UITableViewController {
     }
     
     @objc func updateUI() {
+        guard let category = category else { return }
         title = category.capitalized
-        menuItems = MenuController.shared.items(forCategory: category) ?? []
+        self.menuItems = MenuController.shared.items(forCategory: category) ?? []
         
         self.tableView.reloadData()
     }
@@ -56,9 +57,18 @@ class MenuTableViewController: UITableViewController {
 //        return 1
 //    }
     
+    override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+        
+        guard let category = category else { return }
+        
+        coder.encode(category, forKey: "category")
+    }
+
+    
     override func decodeRestorableState(with coder: NSCoder) {
         super.decodeRestorableState(with: coder)
-        category = (coder.decodeObject(forKey: "category") as! String)
+        category = coder.decodeObject(forKey: "category") as? String
         updateUI()
     }
 
@@ -101,11 +111,7 @@ class MenuTableViewController: UITableViewController {
         }
     }
     
-    override func encodeRestorableState(with coder: NSCoder) {
-        super.encodeRestorableState(with: coder)
-        coder.encode(category, forKey: "category")
-    }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
